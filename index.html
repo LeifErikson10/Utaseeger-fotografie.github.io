@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>My Photography Website</title>
-</head>
-<body>
-  <h1>Welcome to my photography website 📸</h1>
-  <p>This is my first website.</p>
-</body>
-</html>
+<div class="box"></div>
+
+<style>
+.box {
+  width: 200px;
+  height: 200px;
+  background: black;
+  margin: 200px auto;
+  transition: transform 0.3s;
+}
+</style>
+
+<script>
+window.addEventListener("scroll", () => {
+  let scroll = window.scrollY;
+  document.querySelector(".box").style.transform =
+    "rotate(" + scroll * 0.2 + "deg)";
+});
+</script>
